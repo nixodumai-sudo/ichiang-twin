@@ -53,10 +53,10 @@ local Status = Instance.new("TextLabel", Panel)
 Status.Size = UDim2.new(1,-20,0.3,0)
 Status.Position = UDim2.new(0,10,0.65,0)
 Status.BackgroundTransparency = 1
-Status.Text = "by ichiang"
+Status.Text = ""
 Status.Font = Enum.Font.Code
 Status.TextSize = 12
-Status.TextColor3 = Color3.fromRGB(128,255,255)
+Status.TextColor3 = Color3.fromRGB(150,255,255)
 
 -- Button
 local Button = Instance.new("TextButton", Panel)
@@ -89,34 +89,6 @@ local FlagBtn = Instance.new("TextButton", Settings)
 FlagBtn.Size = UDim2.new(1,-20,0,30)
 FlagBtn.Position = UDim2.new(0,10,0,20)
 FlagBtn.Text = "FastFlag: Off"
-
-local TransBtn = Instance.new("TextButton", Settings)
-TransBtn.Size = UDim2.new(1,-20,0,30)
-TransBtn.Position = UDim2.new(0,10,0,65)
-TransBtn.Text = "Mode: Normal"
-
-Save.Mode = 1 -- 1 = Normal, 2 = Smart, 3 = Full
-
-local function ApplyTransparent()
-    if Save.Mode == 1 then
-        Panel.BackgroundTransparency = 0
-        Title.TextTransparency = 0
-        Status.TextTransparency = 0
-        Stroke.Transparency = 0
-        Button.TextTransparency = 0
-        Gear.BackgroundTransparency = 0
-        
-        Gear.TextTransparency = 0
-
-    elseif Save.Mode == 2 then
-        Panel.BackgroundTransparency = 1
-        Title.TextTransparency = 1
-        Status.TextTransparency = 1
-        Stroke.Transparency = 1
-        Button.TextTransparency = 1
-
-                Gear.BackgroundTransparency = 0
-        Gear.TextTransparency = 0
 
 local function ApplyFlag()
     pcall(function()
